@@ -2,7 +2,20 @@
   display: flex;
   color: red;
   gap: 10px;
+  border-bottom: 1px solid black;
+  padding: 2em;
 }
 a {
   text-decoration: none;
+  color: black;
+}
+
+a:hover{
+    color: red;
+    transition: ease-in-out;
+}
+.auth_link a {
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid black;
 }

@@ -1,7 +1,9 @@
 <%= stylesheet_link_tag 'navbar.css' %>
 <div class="nav">
-    <div>
-        <%= link_to 'Visit Google', 'Sign Up' %>
-        <%= link_to 'Visit Google', 'Login' %>
+    <%= link_to 'Home', new_user_session_path %>
+    
+    <div class="auth_link">
+        <%= link_to 'Sign Up', new_user_session_path %>
+        <%= link_to 'Login', user_session_path %>
     </div>
 </div>
