@@ -1,9 +1,10 @@
 .nav {
   display: flex;
+  justify-content: space-between;
   color: red;
   gap: 10px;
   border-bottom: 1px solid black;
-  padding: 2em;
+  padding: 1.4em 8em;
 }
 a {
   text-decoration: none;
@@ -13,6 +14,11 @@ a {
 a:hover{
     color: red;
     transition: ease-in-out;
+}
+
+.auth_link{
+    display: flex;
+    gap: 18px;
 }
 .auth_link a {
   padding: 10px;
