@@ -9,7 +9,8 @@
         <%end%>
 
         <%if user_signed_in?%>
-            <%= link_to 'Profile', new_user_registration_path %>
+        <%= link_to 'Create Post', new_post_path%>
+            <%= link_to 'Profile', edit_user_registration_path %>
             <%= button_to 'Logout', destroy_user_session_path, method: :delete %>
         <%end%>
     </div>
