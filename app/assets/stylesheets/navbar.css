@@ -6,22 +6,23 @@
   border-bottom: 1px solid black;
   padding: 1.4em 8em;
 }
-a {
+a, button {
   text-decoration: none;
   color: black;
 }
 
-a:hover{
-    color: red;
-    transition: ease-in-out;
+a:hover, button:hover {
+  color: red;
+  transition: ease-in-out;
 }
 
-.auth_link{
-    display: flex;
-    gap: 18px;
+.auth_link {
+  display: flex;
+  gap: 18px;
 }
-.auth_link a {
+.auth_link a, button {
   padding: 10px;
   border-radius: 10px;
   border: 1px solid black;
+  cursor: pointer;
 }
