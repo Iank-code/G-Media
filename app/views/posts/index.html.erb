@@ -6,6 +6,9 @@
   <% @posts.each do |post| %>
     <%= render post %>
     <p>
+      Posted by: <%= post.user.email %>
+    </p>
+    <p>
       <%= link_to "Show this post", post %>
     </p>
   <% end %>
