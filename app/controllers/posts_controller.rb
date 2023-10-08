@@ -59,24 +59,25 @@ class PostsController < ApplicationController
     if current_user == @post.user
       @post.destroy
 
+      respond_to do |format|
+        format.html { redirect_to posts_url, notice: "Post was successfully destroyed." }
+        format.json { head :no_content }
+      end
     else
       flash[:notice] = 'Post cannot be deleted'
     end
 
-    # respond_to do |format|
-    #   format.html { redirect_to posts_url, notice: "Post was successfully destroyed." }
-    #   format.json { head :no_content }
-    end
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_post
-      @post = Post.find(params[:id])
-    end
 
-    # Only allow a list of trusted parameters through.
-    def post_params
-      params.require(:post).permit(:text, :image)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_post
+    @post = Post.find(params[:id])
+  end
+
+  # Only allow a list of trusted parameters through.
+  def post_params
+    params.require(:post).permit(:text, :image)
+  end
 end
