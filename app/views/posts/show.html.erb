@@ -9,6 +9,12 @@
     <%= button_to "Delete", @post, method: :delete %>
   
   <%end%>
+
+  <strong>Comments:</strong>
+  <%= render @post.comments%>
+
+  <%= render 'comments/form'%>
+  <br/>
   <%= link_to "Back", posts_path %>
 
 </div>
