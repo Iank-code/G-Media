@@ -12,8 +12,8 @@
 
   <strong>Comments:</strong>
   <%= render @post.comments%>
+  <% render partial: 'comments/form', locals: {post: @post}%>
 
-  <%= render 'comments/form'%>
   <br/>
   <%= link_to "Back", posts_path %>
 

@@ -1,5 +1,5 @@
-<form>
-    <h1>
-        This is an input
-    </h1>
+<form action="<%= post_comments_path(post) %>" method="post">
+    <input type="hidden" name="authenticity token">
+    <textarea name="comment[content]" rows="6" columns="20"></textarea>
+    <input type="submit" value="submit">
 </form>
