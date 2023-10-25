@@ -4,7 +4,7 @@ RSpec.describe PostsController, type: :controller do
   describe "GET /index" do
     it "returns a successful response" do
       get :index
-      expect(@reponse).to be_nil
+      expect(assigns(:posts)).to eq([posts])
     end
   end
 end
