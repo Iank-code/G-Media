@@ -3,15 +3,17 @@
 <h1>Posts</h1>
 
 <div id="posts">
-  <% @posts.each do |post| %>
-    <%= render post %>
-    <p>
-      Posted by: <%= post.user.email %>
-    </p>
-    <p>
-      <%= link_to "Show this post", post %>
-    </p>
-  <% end %>
+  <%if @posts %>
+    <% @posts.each do |post| %>
+      <%= render post %>
+      <p>
+        Posted by: <%= post.user.email %>
+      </p>
+      <p>
+        <%= link_to "Show this post", post %>
+      </p>
+    <% end %>
+  <%end %>
 </div>
 
 <%= link_to "New post", new_post_path %>

@@ -67,7 +67,6 @@ class PostsController < ApplicationController
     else
       flash[:notice] = 'Post cannot be deleted'
     end
-
   end
 
   private
